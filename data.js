@@ -14,10 +14,10 @@ window.MAPA_CONTENIDO = {
     },
     {
       id: 'restricciones',
-      texto: 'Se manejan dos rest. (materia prima y producto)',
+      texto: 'Se manejan dos restricciones (materia prima y producto)',
       icono: 'constraints',
       pista: 'Observa los dos límites que acompañan al proceso.',
-      feedback: 'Correcto. Se manejan dos rest.: materia prima y producto.'
+      feedback: 'Correcto. Se manejan dos restricciones: materia prima y producto.'
     },
     {
       id: 'objetivo',
@@ -27,18 +27,18 @@ window.MAPA_CONTENIDO = {
       feedback: 'Correcto. La función objetivo aparece maximizada.'
     },
     {
-      id: 'proceso',
-      texto: 'Rest. Establecer el proceso de transformación',
-      icono: 'process',
-      pista: 'Sigue el recorrido entre las etapas conectadas.',
-      feedback: 'Correcto. La restricción establece el proceso de transformación.'
-    },
-    {
       id: 'planeacion',
       texto: 'Caso particular de planeación de producción',
       icono: 'planning',
       pista: 'La fábrica necesita decidir qué producir.',
       feedback: 'Correcto. Es un caso particular de planeación de producción.'
+    },
+    {
+      id: 'proceso',
+      texto: 'Restricciones: establecer el proceso de transformación',
+      icono: 'process',
+      pista: 'Sigue el recorrido entre las etapas conectadas.',
+      feedback: 'Correcto. Las restricciones establecen el proceso de transformación.'
     }
   ],
   distractores: [

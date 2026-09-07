@@ -14,13 +14,13 @@ resuelve Simplex, no pide cálculos largos y no desarrolla un modelo numérico c
 
 Fuente principal: `GYM 2_251005_202412 (1).pdf`, página 37, revisada visualmente.
 
-El juego conserva la redacción del esquema manuscrito, incluida la abreviatura `rest.`:
+El juego conserva la redacción indicada para las cinco respuestas:
 
 1. **Transformación de productos**
-2. **Se manejan dos rest. (materia prima y producto)**
+2. **Se manejan dos restricciones (materia prima y producto)**
 3. **Función objetivo maximizada**
-4. **Rest. Establecer el proceso de transformación**
-5. **Caso particular de planeación de producción**
+4. **Caso particular de planeación de producción**
+5. **Restricciones: establecer el proceso de transformación**
 
 Como apoyo breve de memoria se menciona el ejemplo de la página 37: el guarapo se
 transforma sucesivamente en azúcar morena, blanca y glas. No se solicita resolverlo.
