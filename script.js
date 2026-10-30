@@ -36,8 +36,10 @@ const estado = {
   tiempoInicio: null,
   reloj: null,
   transicion: null,
-  sonidoSilenciado: localStorage.getItem('mapa-produccion-sonido') === 'off'
+  sonidoSilenciado: false
 };
+
+try { estado.sonidoSilenciado = localStorage.getItem('mapa-produccion-sonido') === 'off'; } catch (_) { /* almacenamiento opcional */ }
 
 window.mapaEstado = estado;
 
@@ -95,7 +97,7 @@ function actualizarBotonesSonido() {
 
 function alternarSonido() {
   estado.sonidoSilenciado = !estado.sonidoSilenciado;
-  localStorage.setItem('mapa-produccion-sonido', estado.sonidoSilenciado ? 'off' : 'on');
+  try { localStorage.setItem('mapa-produccion-sonido', estado.sonidoSilenciado ? 'off' : 'on'); } catch (_) { /* conservar preferencia de sesión */ }
   actualizarBotonesSonido();
   if (!estado.sonidoSilenciado) audio.tap();
 }
