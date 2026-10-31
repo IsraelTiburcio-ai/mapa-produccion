@@ -1,4 +1,5 @@
 'use strict';
+const optilabResults = window.OptiLabResults?.create('mapa-produccion');
 
 const contenido = window.MAPA_CONTENIDO;
 const $ = (selector) => document.querySelector(selector);
@@ -133,6 +134,7 @@ function prepararTarjetas() {
 }
 
 function iniciarPartida() {
+  optilabResults?.start();
   window.clearTimeout(estado.transicion);
   window.clearInterval(estado.reloj);
   estado.momento = 1;
@@ -350,7 +352,9 @@ function renderMapaCompleto(contenedor, grande) {
 
 function mostrarResultado() {
   window.clearInterval(estado.reloj);
-  $('#m-tiempo').textContent = fmtTiempo(Math.floor((Date.now() - estado.tiempoInicio) / 1000));
+  const seg = Math.floor((Date.now() - estado.tiempoInicio) / 1000);
+  $('#m-tiempo').textContent = fmtTiempo(seg);
+  optilabResults?.complete({reason:'completed',correct:estado.colocadas,total:contenido.caracteristicas.length,durationMs:seg*1000});
   renderMapaCompleto($('#result-map'), false);
   cambiarPantalla('resultado');
   window.setTimeout(() => $('#btn-view-map').focus(), motionReduced ? 0 : 400);
